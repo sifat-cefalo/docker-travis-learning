@@ -11,4 +11,5 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t sifat-cefalo/docker-travis-learning -f Dockerfile.dev .
+          docker build -t ${{ secrets.IMAGE_TAG_NAME }} -f Dockerfile.dev .
+          docker run ${{ secrets.IMAGE_TAG_NAME }} npm start test -- --coverage
