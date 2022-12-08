@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
 jobs:
-  Build docker image:
+  Build-docker-image:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
