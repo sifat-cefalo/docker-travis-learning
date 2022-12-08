@@ -1,6 +1,7 @@
 name: Test with github actions
 on:
-  branches: main
+  push:
+    branches: [ stage ]
 jobs:
   Build docker image:
     runs-on: ubuntu-latest
